@@ -30,15 +30,15 @@ const Header = ({ currentUser }) => {
             SIGN IN
           </Link>
         )}
+        {console.log(currentUser)}
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    currentUser: state.user.currentUser,
-  };
-};
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+
 
 export default connect(mapStateToProps)(Header);
